@@ -1,0 +1,163 @@
+<div class="user">
+  <div class="user-header">
+    <img class="user-icon" src="" alt="">
+    <span class=" glyphicon glyphicon-sunglasses">个人中心</span>
+  </div>
+  <div class="container-fluid">
+    <ul class="user-center-list" ng-controller="DropDownCtrl">
+      <li class="row">
+        <div class="user-title col-md-12 col-sm-12 col-xs-12"  ng-click="toggleSwitch(1)">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-flag"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>个人信息</span>
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon" ng-class="{'glyphicon-chevron-down':value == 1, 'glyphicon-chevron-up':value != 1}"></i>
+          </div>
+        </div>
+        <ul class="col-md-12 col-sm-12 col-xs-12"  ng-show="value == 1">
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">用户名</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">user_id</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">真实姓名</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">ture_name</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">联系电话</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">telephone</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">手机</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">mobile</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">所在城市</div>
+            <div class="col-xs-9">area</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">地址</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">contact_addr</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">QQ</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">qq</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">MSN</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">msn</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">性别</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">sex</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">生日</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">birthday</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">注册时间</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">time</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">邮编</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">zip</div>
+          </li>
+        </ul>
+      </li>
+
+      <li class="row">
+        <div class="baby-title col-md-12 col-sm-12 col-xs-12"  ng-click="toggleSwitch(2)">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-heart"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>宝贝信息</span><!--{'fa-angle-up':toggleIdx == 0, 'fa-angle-down':toggleIdx != 0}-->
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon" ng-class="{'glyphicon-chevron-down':value == 2, 'glyphicon-chevron-up':value != 2}"></i>
+          </div>
+        </div>
+        <ul class="col-md-12 col-sm-12 col-xs-12"  ng-show="value == 2">
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">宝贝姓名</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">ChildName</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">宝贝性别</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">Gender</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">昵称</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">PetName</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">英文名</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">EnglishName</div>
+          </li>
+          <li class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">宝贝生日</div>
+            <div class="col-md-9 col-sm-9 col-xs-9">Birth</div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="list" ng-controller="MyDialogCtrl">
+      <li class="row">
+        <div class="collection-title col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-flag"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>我的收藏</span>
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon"  ng-class="{'glyphicon-chevron-down':value == 3, 'glyphicon-chevron-up':value != 3}"></i>
+          </div>
+        </div>
+      </li>
+      <li class="row">
+        <div class="artical-title col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-flag"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>我的文章</span>
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon" ng-class="{'glyphicon-chevron-down':value == 4, 'glyphicon-chevron-up':value != 4}"></i>
+          </div>
+        </div>
+      </li>
+      <li class="row">
+        <div class="msg-title col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-flag"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>我的消息</span>
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon"  ng-class="{'glyphicon-chevron-down':value == 5, 'glyphicon-chevron-up':value != 5}"></i>
+          </div>
+        </div>
+      </li>
+      <li class="row">
+        <div class="community-title col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-flag"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>我的社区</span>
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon"  ng-class="{'glyphicon-chevron-down':value == 6, 'glyphicon-chevron-up':value != 6}"></i>
+          </div>
+        </div>
+      </li>
+      <li class="row"  ng-click="goToSettings()">
+        <div class="set-title col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <i class="glyphicon glyphicon-flag"></i>
+          </div>
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <span>设置中心</span>
+            <i class="drop-down-btn col-md-2 col-sm-2 col-xs-2 glyphicon"  ng-class="{'glyphicon-chevron-down':value == 7, 'glyphicon-chevron-up':value != 7}"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
