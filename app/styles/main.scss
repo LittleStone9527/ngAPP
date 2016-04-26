@@ -1,8 +1,9 @@
 $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 .browsehappy {
   margin: 0.2em 0;
@@ -202,9 +203,9 @@ body {
   .msg-title,
   .community-title,
   .set-title {
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
-    color: #cccccc;
+    color: #999;
     padding-bottom: 10px;
     margin-bottom: 10px;
     margin-top: 20px;
@@ -266,7 +267,7 @@ close btn
 }
 
 .ngdialog.ngdialog-theme-default .ngdialog-close:before {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   //background: #cccccc;
   border-radius: 0;
   color: #333;
